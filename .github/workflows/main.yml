@@ -1,27 +1,27 @@
-name: Static-web-host
-on:
-  push:
-    branches: ["master"]
+# name: Static-web-host
+# on:
+#   push: 
+#     branches: ["master"]
 
-permissions: 
-  contents: read
-  pages: write
-  id-token: write
+# permissions: 
+#   contents: read
+#   pages: write
+#   id-token: write
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: cloning the repository
-        uses: actions/checkout@v4
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: cloning the repository
+#         uses: actions/checkout@v4
 
-      - name: setup the github pages
-        uses: actions/configure-pages@v5
+#       - name: setup the github pages
+#         uses: actions/configure-pages@v5
 
-      - name: uploading the files  
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+#       - name: uploading the files  
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: .
 
-      - name: deploy the files 
-        uses: actions/deploy-pages@v4
+#       - name: deploy the files 
+#         uses: actions/deploy-pages@v4
