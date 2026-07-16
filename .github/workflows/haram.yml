@@ -1,0 +1,22 @@
+name: static-web
+on:
+  push:
+    branches: [ "master" ]
+permissions: 
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cloning the repsoitory
+        uses: actions/checkout@v4
+      - name: setup the github pages
+        uses: actions/configure-pages@v5
+      - name: uploading the files
+        uses: actions/upload-pages@v3
+        with:
+          path: .
+      - name: deploy the files
+        uses: actions/deploy-pages@v4
