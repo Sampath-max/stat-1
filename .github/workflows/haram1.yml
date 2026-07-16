@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: cloning the repsoitory
+      - name: cloning the repsoitory.
         uses: actions/checkout@v4
       - name: setup the github pages
         uses: actions/configure-pages@v5
